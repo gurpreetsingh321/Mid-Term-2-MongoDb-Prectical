@@ -1,12 +1,5 @@
 # MongoDB Mid Term 2 Practical - Set B
 
-## Run kaise kare
-
-```powershell
-mongosh --file Scenario_B1_Cafe_Orders.mongodb.js
-mongosh --file Scenario_B2_Library_Books.mongodb.js
-```
-
 ---
 
 ## File 1: `Scenario_B1_Cafe_Orders.mongodb.js`
