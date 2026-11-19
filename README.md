@@ -7,8 +7,6 @@ mongosh --file Scenario_B1_Cafe_Orders.mongodb.js
 mongosh --file Scenario_B2_Library_Books.mongodb.js
 ```
 
-Ya VS Code me MongoDB extension se file kholo aur Play button dabao.
-
 ---
 
 ## File 1: `Scenario_B1_Cafe_Orders.mongodb.js`
