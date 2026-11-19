@@ -56,17 +56,17 @@ Coffee: (2 + 3 + 1) = 6 cups x 120 = 720.
 ```js
 { acknowledged: true, insertedId: null, matchedCount: 1, modifiedCount: 1, upsertedCount: 0 }
 ```
-Copies of Operating Systems: 3 se 5.
+Copies of Operating Systems change from 3 to 5.
 
 ### Task 2: Reduce copies when a book is borrowed
 ```js
 { acknowledged: true, insertedId: null, matchedCount: 1, modifiedCount: 1, upsertedCount: 0 }
 ```
-Copies of Database Systems: 5 se 4.
+Copies of Database Systems change from 5 to 4.
 
 ### Task 3: Upsert
 
-Pehli run (naya document insert hota hai):
+First run (a new document is inserted):
 ```js
 {
   acknowledged: true,
@@ -77,7 +77,7 @@ Pehli run (naya document insert hota hai):
 }
 ```
 
-Doosri run (document already hai, koi duplicate nahi banta):
+Second run (the document already exists, so no duplicate is created):
 ```js
 {
   acknowledged: true,
@@ -88,24 +88,24 @@ Doosri run (document already hai, koi duplicate nahi banta):
 }
 ```
 
-### Task 4: `$set` aur `$inc` ek saath
+### Task 4: `$set` and `$inc` together
 ```js
 { acknowledged: true, insertedId: null, matchedCount: 1, modifiedCount: 1, upsertedCount: 0 }
 ```
-Computer Networks ab: `copies: 3`, `status: 'available'`.
+Computer Networks now has `copies: 3` and `status: 'available'`.
 
-### Task 5: Delete one
+### Task 5: Delete one matching document
 ```js
 { acknowledged: true, deletedCount: 1 }
 ```
 
-### Task 6: Delete many
+### Task 6: Delete many matching documents
 ```js
 { acknowledged: true, deletedCount: 2 }
 ```
-Torn Notes aur Water-damaged Atlas delete hue. Kisi book ka status "lost" nahi hai, ye theek hai.
+Torn Notes and Water-damaged Atlas are deleted. No book has the status "lost", which is fine.
 
-### Task 7: Final data
+### Task 7: Verify the final data
 ```js
 [
   { title: 'Artificial Intelligence', copies: 4 },
